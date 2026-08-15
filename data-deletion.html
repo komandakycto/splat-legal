@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPLAT — Data Deletion</title>
+    <style>
+        :root {
+            --bg: #f4f7f0;
+            --surface: #e8efe2;
+            --text: #36432f;
+            --heading: #232c1e;
+            --accent: #4e7a3e;
+            --link: #3f6a31;
+            --border: #c3d2bc;
+            --muted: #6e7f66;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            padding: 2rem 1rem;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: var(--accent);
+            font-size: 1.8rem;
+            margin-bottom: 0.25rem;
+        }
+        .subtitle {
+            color: var(--text);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+        .effective-date {
+            color: var(--muted);
+            font-size: 0.85rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+        h2 {
+            color: var(--heading);
+            font-size: 1.25rem;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.35rem;
+            border-bottom: 1px solid var(--border);
+        }
+        p { margin-bottom: 0.85rem; }
+        a { color: var(--link); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        ul, ol {
+            margin-bottom: 0.85rem;
+            padding-left: 1.5rem;
+        }
+        li { margin-bottom: 0.35rem; }
+        .highlight {
+            background: var(--surface);
+            border-left: 3px solid var(--accent);
+            padding: 0.75rem 1rem;
+            margin-bottom: 1rem;
+            border-radius: 0 4px 4px 0;
+        }
+        .footer {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #1a1f16;
+                --surface: #242b1f;
+                --text: #c6d2bc;
+                --heading: #e8efe2;
+                --accent: #9dc17e;
+                --link: #9dc17e;
+                --border: #333c2c;
+                --muted: #8b9a82;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+<h1>Data Deletion</h1>
+<p class="subtitle">SPLAT: Block Puzzle — Block Puzzle Game for Android</p>
+<p class="effective-date">Last Updated: August 15, 2026</p>
+
+<div class="highlight">
+    <p>
+        <strong>SPLAT has no account.</strong> We never ask you to register, we run no
+        servers, and we hold no copy of your game data. Your progress lives on your own
+        device and, if you have signed in to Google Play Games, in your own Google Account —
+        Sections 1 and 2 explain how to erase both. Advertising and analytics data is a
+        separate matter, held by Google; Section 3 covers it.
+    </p>
+</div>
+
+<!-- ======================================== -->
+<h2>1. Data on Your Device</h2>
+<p>
+    Your progress, settings and any interrupted run are stored in the App's private
+    storage. To remove them:
+</p>
+<ul>
+    <li><strong>Reset your progress in the game</strong> —
+        <strong>Settings → RESET PROGRESS</strong>. This clears your unlocked leagues, best
+        scores and tutorial state.</li>
+    <li><strong>Clear all App data</strong> — Android
+        <strong>Settings → Apps → SPLAT → Storage → Clear data</strong>, or simply uninstall
+        the App. This removes everything, including your settings.</li>
+</ul>
+<div class="highlight">
+    <p>
+        <strong>Resetting progress also asks Google to delete your cloud save.</strong> The
+        App sends that request whenever you reset, but it is silent and not guaranteed: if
+        you are offline or signed out of Play Games it will not happen, and your progress
+        can come back from the cloud the next time you play. Treat RESET PROGRESS as
+        destructive if you are signed in — and if you need certainty either way, use
+        Section 2 below, which is the only route we can vouch for.
+    </p>
+</div>
+
+<!-- ======================================== -->
+<h2>2. Cloud Saves and Leaderboard Scores</h2>
+<p>
+    If you signed in to Google Play Games, your cloud save and your leaderboard scores are
+    stored by Google under your own Google Account. Deleting them through your Google
+    Account is the only route that is certain: we cannot reach your leaderboard scores at
+    all, and although the App asks Google to delete the cloud save when you reset your
+    progress, it receives no confirmation that the deletion happened.
+</p>
+<p>
+    Google's instructions are here:
+    <a href="https://support.google.com/googleplay/answer/9130646" target="_blank" rel="noopener">Delete your Play Games data or Play Games profile</a>.
+    You can delete the data for this one game without touching your other games. Google
+    performs the deletion and defines its own scope.
+</p>
+<div class="highlight">
+    <p>
+        <strong>Do this in the right order, or it undoes itself.</strong> The App uploads a
+        cloud save shortly after your progress changes and whenever it goes into the
+        background. If you delete your Play Games data and then open the game again while
+        signed in, the copy still on your device is uploaded and the deletion is undone.
+        Reset your progress or uninstall the App first, then delete through your Google
+        Account.
+    </p>
+</div>
+<p>
+    To stop anything further from being stored in your Google Account, sign out of Play
+    Games on your device. That is the only setting that stops both.
+</p>
+<p>
+    Switching publication off in <strong>Settings → PUBLISH SCORES</strong> does less than
+    it sounds like: it stops future scores being submitted to the public leaderboards, but
+    your best scores remain part of the private cloud save, which keeps being written while
+    you are signed in. It also does not remove scores that have already been published.
+</p>
+
+<!-- ======================================== -->
+<h2>3. Advertising and Analytics Data</h2>
+<p>
+    To reset or delete your advertising identifier, open Android's settings — on most
+    devices under <strong>Google → Ads</strong> or <strong>Privacy → Ads</strong>. To stop
+    further analytics and advertising collection where the App asks for consent, reopen the
+    dialog through the privacy options in the App's Settings screen and withdraw it.
+</p>
+<p>
+    Data already collected through these services sits on Google's systems and carries a
+    randomly generated identifier rather than your name or account. We cannot find your
+    records from your name or your email address. If you are able to supply your
+    app-instance identifier, we can ask Google to delete the analytics events recorded
+    against it.
+</p>
+
+<!-- ======================================== -->
+<h2>4. Requesting Deletion by Email</h2>
+<p>
+    Write to
+    <a href="mailto:support-komandakycto@proton.me">support-komandakycto@proton.me</a> with
+    the subject line "Data Deletion Request". We will delete what we hold that relates to
+    you, except anything we are required to keep by law. We aim to answer within one month,
+    or sooner where the law that applies to you requires it. Please do not send identity
+    documents unless we ask for something we reasonably need in order to verify your
+    request.
+</p>
+
+<div class="footer">
+    <p>&copy; 2026 Leonid Korsakov. All rights reserved.</p>
+    <p>
+        <a href="privacy-policy.html">Privacy Policy</a> &nbsp;|&nbsp;
+        <a href="terms-of-service.html">Terms of Service</a>&nbsp;|&nbsp;
+        <a href="third-party-notices.html">Third-Party Notices</a>
+    </p>
+</div>
+
+</div>
+</body>
+</html>
