@@ -229,10 +229,17 @@
 </p>
 <ul>
     <li>Your game profile — which leagues you have unlocked, your best score in each
-        league, which messages you have already seen, whether you have finished the
-        tutorial, and, if you have signed in, the display name from your Google Play Games
-        profile. That name is the only field stored by the App that can identify a person,
-        and it reaches the App from Google.</li>
+        league, the counters behind achievements, which messages you have already seen,
+        whether you have finished the tutorial, and, if you have signed in, the display
+        name and the player ID from your Google Play Games profile. Those two fields are
+        the only ones stored by the App that can identify a person, and both reach the App
+        from Google. The player ID is kept for one purpose: so that achievements are only
+        recorded for the player who earned them. A profile that has never been signed in
+        belongs to nobody, so the first account to sign in takes it over — that is how
+        progress made before signing in is kept. If a different account later signs in on
+        a shared phone, the App stops sending achievements for that device rather than
+        crediting the new account with someone else's; it does not start again on that
+        device, because the App cannot tell the two players apart.</li>
     <li>Your settings — sound, music, vibration, reminders and interface language.</li>
     <li>A snapshot of an interrupted run, so that a phone call in the middle of a game
         does not cost you the game. It is erased when the run ends.</li>
