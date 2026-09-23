@@ -93,7 +93,7 @@
 
 <h1>Data Deletion</h1>
 <p class="subtitle">SPLAT: Block Puzzle — Block Puzzle Game for Android</p>
-<p class="effective-date">Last Updated: August 17, 2026</p>
+<p class="effective-date">Last Updated: September 23, 2026</p>
 
 <div class="highlight">
     <p>
@@ -131,39 +131,49 @@
 </div>
 
 <!-- ======================================== -->
-<h2>2. Cloud Saves and Leaderboard Scores</h2>
+<h2>2. Cloud Saves, Leaderboard Scores and Achievements</h2>
 <p>
-    If you signed in to Google Play Games, your cloud save and your leaderboard scores are
-    stored by Google under your own Google Account. Deleting them through your Google
-    Account is the only route that is certain: we cannot reach your leaderboard scores at
-    all, and although the App asks Google to delete the cloud save when you reset your
-    progress, it receives no confirmation that the deletion happened.
+    If you signed in to Google Play Games, your cloud save, your leaderboard scores and your
+    achievements are stored by Google under your own Google Account. Deleting them through
+    your Google Account is the only route that is certain. We cannot delete or change your
+    leaderboard scores or achievements at all. The App does ask Google to delete the cloud
+    save when you reset your progress, but it receives no confirmation that the deletion
+    happened.
 </p>
 <p>
     Google's instructions are here:
     <a href="https://support.google.com/googleplay/answer/9130646" target="_blank" rel="noopener">Delete your Play Games data or Play Games profile</a>.
     You can delete the data for this one game without touching your other games. Google
-    performs the deletion and defines its own scope.
+    performs the deletion and defines its own scope: its page says that deleting a game's
+    data “might also delete any in-game achievements or progress”, so check the result in
+    the Play Games app afterwards. Deleting your whole Play Games profile removes the
+    achievements and leaderboard scores of every game at once.
 </p>
 <div class="highlight">
     <p>
         <strong>Do this in the right order, or it undoes itself.</strong> The App uploads a
         cloud save shortly after your progress changes and whenever it goes into the
         background. If you delete your Play Games data and then open the game again while
-        signed in, the copy still on your device is uploaded and the deletion is undone.
-        Reset your progress or uninstall the App first, then delete through your Google
-        Account.
+        signed in, the copy still on your device is uploaded, your achievement progress is
+        sent again from that copy, and the deletion is undone. Reset your progress or
+        uninstall the App first, then delete through your Google Account.
     </p>
 </div>
 <p>
     To stop anything further from being stored in your Google Account, sign out of Play
-    Games on your device. That is the only setting that stops both.
+    Games on your device. That is the only setting that stops all three. Resetting your
+    progress clears the counters on your device and asks Google to delete the cloud save,
+    but achievements you have already earned stay in your Play Games profile until you
+    delete your Play Games data for this game.
 </p>
 <p>
     Switching publication off in <strong>Settings → PUBLISH SCORES</strong> does less than
     it sounds like: it stops future scores being submitted to the public leaderboards, but
     your best scores remain part of the private cloud save, which keeps being written while
-    you are signed in. It also does not remove scores that have already been published.
+    you are signed in. It also does not remove scores that have already been published. And
+    it does not touch achievements: while you are signed in, achievement progress is sent to
+    Play Games whatever this setting says, and achievements already earned stay where they
+    are.
 </p>
 
 <!-- ======================================== -->
